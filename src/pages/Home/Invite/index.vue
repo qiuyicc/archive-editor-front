@@ -1,13 +1,15 @@
 <template>
-    <router-view></router-view>
+  <div>
+    Invite
+  </div>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+    name:"Invite"
 }
 </script>
 
 <style>
+
 </style>

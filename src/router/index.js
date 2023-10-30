@@ -1,0 +1,64 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+export default new VueRouter({
+    routes:[
+        {
+            path:"/home",
+            component:()=>import('@/pages/Home'),
+            children:[
+                {
+                    path:'list',
+                    component:()=>import('@/pages/Home/List')
+                },
+                {
+                    path:'useinfo',
+                    component:()=>import('@/pages/Home/UseInfo')
+                },
+                {
+                    path:'donate',
+                    component:()=>import('@/pages/Home/Donate')
+                },
+                {
+                    path:'collection',
+                    component:()=>import('@/pages/Home/Collection')
+                },
+                {
+                    path:'order',
+                    component:()=>import('@/pages/Home/Order')
+                },
+                {
+                    path:'invite',
+                    component:()=>import('@/pages/Home/Invite')
+                },
+                {
+                    path:'userinfo',
+                    component:()=>import('@/pages/Home/UseInfo')
+                },
+                {
+                    path:'/home',
+                    redirect:'/home/list'
+                },
+            ]
+        },
+        {
+            path:"/login",
+            component:()=>import('@/pages/Login'),
+            meta:{}
+        },
+        {
+            path:"/register",
+            component:()=>import('@/pages/Register'),
+            meta:{}
+        },
+        {
+            path:'/',
+            redirect:'/home'
+        },
+        {
+            path:'*',
+            component:()=>import('@/pages/NotFound')
+        }
+    ]
+})

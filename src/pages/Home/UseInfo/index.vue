@@ -1,13 +1,15 @@
 <template>
-    <router-view></router-view>
+  <div>
+    UseInfo
+  </div>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+    name:'UserInfo'
 }
 </script>
 
 <style>
+
 </style>
